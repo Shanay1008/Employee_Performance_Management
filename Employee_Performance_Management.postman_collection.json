@@ -1,0 +1,250 @@
+{
+  "info": {
+    "_postman_id": "2882589e-4e56-4ad3-a8e5-0c9150c5bfc6",
+    "name": "Employee_Performance_Management",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "53741255",
+    "_collection_link": "https://go.postman.co/collection/53741255-2882589e-4e56-4ad3-a8e5-0c9150c5bfc6?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Create Employee",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"Priya Patel\",\r\n    \"email\": \"priya.p@company.com\",\r\n    \"department\": \"Engineering\",\r\n    \"role\": \"EMPLOYEE\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/performance/employees",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "performance",
+            "employees"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Employee 2",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"Amit Desai\",\r\n    \"email\": \"amit.d@company.com\",\r\n    \"department\": \"Engineering\",\r\n    \"role\": \"MANAGER\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/performance/employees",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "performance",
+            "employees"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Assign Task",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/performance/tasks/1?taskTitle=Update Database Schema",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "performance",
+            "tasks",
+            "1"
+          ],
+          "query": [
+            {
+              "key": "taskTitle",
+              "value": "Update Database Schema"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Assign Task 2",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/performance/tasks/1?taskTitle=Fix Login Bug",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "performance",
+            "tasks",
+            "1"
+          ],
+          "query": [
+            {
+              "key": "taskTitle",
+              "value": "Fix Login Bug"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Mark Status",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/performance/tasks/1/complete",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "performance",
+            "tasks",
+            "1",
+            "complete"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Review",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"rating\": 4,\r\n    \"comments\": \"Great work on the login bug, Rahul!\",\r\n    \"reviewPeriod\": \"Q1-2026\",\r\n    \"managerId\": 3,\r\n    \"employee\": {\r\n        \"id\": 1 \r\n    }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/performance/reviews",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "performance",
+            "reviews"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Summary",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/performance/summary/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "performance",
+            "summary",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
