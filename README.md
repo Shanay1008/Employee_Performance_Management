@@ -17,6 +17,7 @@ Data Security: Strict input validation using Jakarta annotations (@NotBlank, @Em
 Clean Architecture: Strict separation of Controller, Service, and Repository layers.
 
 Tech Stack
+
 Java 21
 
 Spring Boot 3.3.5
@@ -39,26 +40,21 @@ com.pict.repository - Manages automated database SQL queries
 com.pict.entity - Database table models (Employee, Task, PerformanceReview)
 
 How to Run
+
 Step 1: Clone the repository
 
 Bash
-git clone https://github.com/[YOUR-USERNAME]/Employee-Performance-System.git
-(Note: Replace [YOUR-USERNAME] with your actual GitHub username).
+git clone https://github.com/Shanay1008/Employee_Performance_Management
 
 Step 2: Start the Server
 
-Open the project in IntelliJ IDEA.
-
 Locate src/main/java/com/pict/CapstoneApplication.java.
 
-Click the Run button (Green Play Icon).
+Run the project.
 
 Check the console to ensure Tomcat started on port 8080.
 
-(Optional) View the live database at http://localhost:8080/h2-console (JDBC URL: jdbc:h2:mem:performancedb).
-
 Step 3: Use Postman for Testing
-(🏆 Note for Evaluator: A complete Postman Collection .json file is included in the root directory of this repository. You can import it directly into Postman to instantly run all tests below).
 
 1. Create Employee
 
